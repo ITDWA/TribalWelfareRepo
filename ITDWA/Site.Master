@@ -83,8 +83,7 @@
         </div>--%>
 
           <div class="bg-top navbar-light">
-    	<div class="container">
-             <div style="margin-bottom:100%" class="bird-container bird-container--one">
+              <div class="bird-container bird-container--one">
 		<div class="bird bird--one"></div>
 	</div>
 	
@@ -100,6 +99,8 @@
 		<div class="bird bird--four"></div>
 	</div>
 	
+    	<div class="container">
+        
 
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
 				<%--<div class="logo">
@@ -125,7 +126,7 @@
 	      
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link pl-0">Home</a></li>
 			
 				<li class="nav-item dropdown "><a href="#" class="nav-link">Village Volunteers</a>
 					<div class="dropdown-content">
@@ -157,14 +158,16 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - ITDWA</p>
+                <p style="color:white">&copy; <%: DateTime.Now.Year %> - ITDWA</p>
             </footer>
         </div>
         </div>
     </form>
     
 </body>
-    <style>
+  
+</html>
+  <style>
           .bg {
   /* The image used */
   background-image: url("background.jpg");
@@ -211,4 +214,3 @@
 }
 
     </style>
-</html>
