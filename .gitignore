@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ITDWA/v15
+/.vs/config
+/.vs/TribalWelfareRepo/v15
+/.vs
+/ITDWA/obj
