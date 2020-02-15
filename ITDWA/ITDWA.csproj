@@ -165,6 +165,9 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\scrollax.min.js" />
+    <Content Include="Modules\CMTID\CMTIDReg.aspx" />
+    <Content Include="Modules\FeedbackForm\FeedbackForm.aspx" />
+    <Content Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx" />
     <Content Include="Modules\MCID\MCIDReg.aspx" />
     <Content Include="Modules\VVID\VVIDView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -229,7 +232,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modules\CMTID\CMTIDReg.aspx.cs">
+      <DependentUpon>CMTIDReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CMTID\CMTIDReg.aspx.designer.cs">
+      <DependentUpon>CMTIDReg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\DCID\DatabaseController.cs" />
+    <Compile Include="Modules\FeedbackForm\FeedbackForm.aspx.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\FeedbackForm\FeedbackForm.aspx.designer.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx.cs">
+      <DependentUpon>FieldVisitSchedUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx.designer.cs">
+      <DependentUpon>FieldVisitSchedUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\MCID\DatabaseController.cs" />
     <Compile Include="Modules\MCID\MCIDReg.aspx.cs">
       <DependentUpon>MCIDReg.aspx</DependentUpon>
