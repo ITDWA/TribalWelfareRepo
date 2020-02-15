@@ -22,7 +22,7 @@
                  <button type="button" onclick='window.location = "/Default.aspx";' class="btn btn-primary"><< Back To Home</button>
                 <br />
                 <br />
-                <!-- Sex image -->
+               
               <button type="button" disabled="true" style="font-weight:700" class="btn btn-primary btn-lg btn-block">VVID Registration Form</button>
                 <h2 id="txtVVID" style="margin-left:30%" class="card-title"></h2>
                 <br>
