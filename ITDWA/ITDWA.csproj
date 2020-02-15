@@ -165,6 +165,8 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="js\scrollax.min.js" />
+    <Content Include="Modules\AspirationsAndGrievancesUpdate\AspirationsAndGrievancesUpdate.aspx" />
+    <Content Include="Modules\AspirationsAndGrievances\AspirationsAndGrievances.aspx" />
     <Content Include="Modules\CMTID\CMTIDReg.aspx" />
     <Content Include="Modules\FeedbackForm\FeedbackForm.aspx" />
     <Content Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx" />
@@ -231,6 +233,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AspirationsAndGrievancesUpdate\AspirationsAndGrievancesUpdate.aspx.cs">
+      <DependentUpon>AspirationsAndGrievancesUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AspirationsAndGrievancesUpdate\AspirationsAndGrievancesUpdate.aspx.designer.cs">
+      <DependentUpon>AspirationsAndGrievancesUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AspirationsAndGrievances\AspirationsAndGrievances.aspx.cs">
+      <DependentUpon>AspirationsAndGrievances.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AspirationsAndGrievances\AspirationsAndGrievances.aspx.designer.cs">
+      <DependentUpon>AspirationsAndGrievances.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\CMTID\CMTIDReg.aspx.cs">
       <DependentUpon>CMTIDReg.aspx</DependentUpon>
