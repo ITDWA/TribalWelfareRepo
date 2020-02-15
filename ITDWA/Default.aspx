@@ -4,7 +4,7 @@
 
   
 
- <div class="row">
+ <div class="row ">
    <div class="form-group">
 
   <div id="myCarousel" class="carousel slide col-lg-8" data-ride="carousel">
@@ -112,7 +112,7 @@
       <br>
       <br>
       <br>
-     <div class="container">
+     <div class=" panel panel-default">
          <div class="container">
               <h2 style="font-weight:800">Training Materials</h2>
     <div class="row col-md-12 ">
@@ -161,46 +161,55 @@
         <div class="carousel-inner">
           <div class="item  active">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>          
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>        
+              </div> 
+                <div class="col-md-3">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div> 
             </div>
           </div>
           <div class="item">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>          
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>        
+              </div> 
+                <div class="col-md-3">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div> 
             </div>
           </div>
           <div class="item">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>          
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>  
+              </div> 
+                 <div class="col-md-3">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
             </div>
           </div>
         </div>
-        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+        <a data-slide="prev" href="#media" class="left carousel-control"><</a>
+        <a data-slide="next" href="#media" class="right carousel-control">></a>
       </div>                          
     </div>
   </div>
@@ -215,7 +224,7 @@
   </div>
   <div class='row'>
     <div class='col-md-12'>
-      <div class="carousel slide media-carousel" id="media">
+      <div class="carousel slide media-carousel" id="media1">
         <div class="carousel-inner">
           <div class="item  active">
             <div class="row">
@@ -257,14 +266,16 @@
             </div>
           </div>
         </div>
-        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
-        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+        <a data-slide="prev" href="#media1" class="left carousel-control"><</a>
+        <a data-slide="next" href="#media1" class="right carousel-control">></a>
       </div>                          
     </div>
   </div>
 </div>
        </div>
+   
     <style>
+       
         /* carousel */
 .media-carousel 
 {
@@ -389,6 +400,8 @@
     box-shadow: 3px 3px 0px transparent;
     transition: 0.5s;
     }
+
+
     </style>
     <script>
 $(document).ready(function() {
