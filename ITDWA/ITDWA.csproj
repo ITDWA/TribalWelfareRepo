@@ -145,6 +145,8 @@
     <Content Include="css\css\.DS_Store" />
     <Content Include="images\4.jpg" />
     <Content Include="js\.DS_Store" />
+    <Content Include="css\css\birdstyle.less" />
+    <Content Include="css\css\bird.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.JPG" />
@@ -168,6 +170,8 @@
     <Content Include="Modules\AspirationsAndGrievancesUpdate\AspirationsAndGrievancesUpdate.aspx" />
     <Content Include="Modules\AspirationsAndGrievances\AspirationsAndGrievances.aspx" />
     <Content Include="Modules\CMTID\CMTIDReg.aspx" />
+    <Content Include="Modules\ContactForm\Contact.aspx" />
+    <Content Include="Modules\ContactForm\Contact.html" />
     <Content Include="Modules\FeedbackForm\FeedbackForm.aspx" />
     <Content Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx" />
     <Content Include="Modules\MCID\MCIDReg.aspx" />
@@ -254,6 +258,13 @@
     </Compile>
     <Compile Include="Modules\CMTID\CMTIDReg.aspx.designer.cs">
       <DependentUpon>CMTIDReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ContactForm\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ContactForm\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\DCID\DatabaseController.cs" />
     <Compile Include="Modules\FeedbackForm\FeedbackForm.aspx.cs">
