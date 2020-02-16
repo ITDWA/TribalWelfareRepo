@@ -178,16 +178,7 @@
                     </div>
                 </div>
                 </div>
-            <br />
-            <div style="margin-top: 1em;">
-                <div class="row">
-                    <div class="col-md-6">
-                        <asp:Button ID="btnSubmit" type="button" Text="Submit" runat="server" class="btn btn-primary btn-lg btn-block" OnClick="btnSubmit_Click"></asp:Button>
-                    </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick='window.location = "/Default.aspx";'>Cancel</button>
-                    </div>
-                </div>
+           
                 <br />
                 <br />
             </div>

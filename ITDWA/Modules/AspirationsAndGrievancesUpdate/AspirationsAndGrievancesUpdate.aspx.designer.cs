@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ITDWA.Modules.VVID {
+namespace ITDWA {
     
     
-    public partial class VVIDView {
+    public partial class AspirationsAndGrievancesUpdate {
         
         /// <summary>
         /// VVID control.
@@ -22,111 +22,84 @@ namespace ITDWA.Modules.VVID {
         protected global::System.Web.UI.HtmlControls.HtmlForm VVID;
         
         /// <summary>
-        /// txtVV control.
+        /// RadioButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtVV;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
         
         /// <summary>
-        /// Label1 control.
+        /// RadioButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
         
         /// <summary>
-        /// Label2 control.
+        /// RadioButton5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton5;
         
         /// <summary>
-        /// Button1 control.
+        /// RadioButton3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
         
         /// <summary>
-        /// TextBox3 control.
+        /// RadioButton4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBox3;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton4;
         
         /// <summary>
-        /// Button2 control.
+        /// RadioButton6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton6;
         
         /// <summary>
-        /// Button3 control.
+        /// RadioButton7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton7;
         
         /// <summary>
-        /// Button4 control.
+        /// RadioButton8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton8;
         
         /// <summary>
-        /// TextBox1 control.
+        /// RadioButton9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBox1;
-        
-        /// <summary>
-        /// Button5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
-        
-        /// <summary>
-        /// Button6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
-        
-        /// <summary>
-        /// btnRegister control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegister;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton9;
     }
 }
