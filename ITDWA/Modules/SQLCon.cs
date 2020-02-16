@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -8,14 +10,22 @@ namespace ITDWA
 {
     public class SQLCon
     {
-        public static SqlConnection cnn;
-
-        public static void createCon()
+        //-- code to get a connection object
+        public static SqlConnection GetConnection()
         {
-            string connetionString;            
-            connetionString = @"Data Source=apvalletdev.cxh24ke4lzcx.ap-south-1.rds.amazonaws.com;Initial Catalog=AP_VALLET_DB;User ID=vallet_apps;Password=apps";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
+            string str = ConfigurationManager.ConnectionStrings["ITDWAConnectionString"].ConnectionString;
+            SqlConnection con = new SqlConnection(str);
+            con.Open();
+            return con;
         }
+
+        //-- code to make sure to close connection and dispose the object
+        public static void Dispose(SqlConnection con)
+        {
+            if (con.State == System.Data.ConnectionState.Open)
+            con.Close();
+            con.Dispose();
+        }
+       
     }
 }

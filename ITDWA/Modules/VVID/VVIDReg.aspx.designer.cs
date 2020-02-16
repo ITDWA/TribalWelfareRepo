@@ -76,13 +76,13 @@ namespace ITDWA {
         protected global::System.Web.UI.WebControls.TextBox txtGender;
         
         /// <summary>
-        /// txtCast control.
+        /// txtCaste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCast;
+        protected global::System.Web.UI.WebControls.TextBox txtCaste;
         
         /// <summary>
         /// txtDOB control.
@@ -155,6 +155,15 @@ namespace ITDWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPin;
+        
+        /// <summary>
+        /// txtContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContact;
         
         /// <summary>
         /// txtPass control.

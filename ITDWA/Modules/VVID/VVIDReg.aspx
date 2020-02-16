@@ -8,6 +8,9 @@
    
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="css/jquery-ui.css" rel="stylesheet" />  
+<script src="js/jquery-1.11.3.min.js"></script>  
+<script src="js/jquery-ui.js"></script>  
     <title>VVID Registration</title>
 </head>
 <body>
@@ -49,7 +52,7 @@
                        <asp:TextBox id="txtGender" type="text" runat="server" class="form-control" placeholder="Gender"></asp:TextBox>
                     </div>
                     <div class="form-group col-md-2">
-                        <asp:TextBox id="txtCast" type="text" runat="server" class="form-control" placeholder="Cast"></asp:TextBox>
+                        <asp:TextBox id="txtCaste" type="text" runat="server" class="form-control" placeholder="Caste"></asp:TextBox>
                     </div>
                     <div class="form-group col-md-2">
                        <asp:TextBox id="txtDOB" type="text" runat="server" class="form-control" placeholder="Date of Birth"></asp:TextBox>
@@ -103,6 +106,13 @@
                         <div class="form-group">
                             <label for="tel" class="col-form-label">PIN Code</label>
                            <asp:TextBox type="text" runat="server" class="form-control" id="txtPin" placeholder="" required></asp:TextBox>
+                            <div class="phone-feedback">
+                            
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="tel" class="col-form-label">Contact Number</label>
+                           <asp:TextBox type="text" runat="server" class="form-control" id="txtContact" placeholder="" required></asp:TextBox>
                             <div class="phone-feedback">
                             
                             </div>
@@ -169,5 +179,15 @@
     background-color: #e9ebee;
 }
     </style>
-
+    <script>
+        $(document).ready(function () {
+            $('#txtDOB').datepicker(
+                {
+                    dateFormat: 'dd/mm/yy',
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange: '1950:2100'
+                });
+        })  
+    </script>
 </html>
