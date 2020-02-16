@@ -170,10 +170,12 @@
     <Content Include="Modules\AspirationsAndGrievancesUpdate\AspirationsAndGrievancesUpdate.aspx" />
     <Content Include="Modules\AspirationsAndGrievances\AspirationsAndGrievances.aspx" />
     <Content Include="Modules\CMTID\CMTIDReg.aspx" />
+    <Content Include="Modules\DashBoard\DashBoard1.aspx" />
     <Content Include="Modules\ContactForm\Contact.aspx" />
     <Content Include="Modules\ContactForm\Contact.html" />
     <Content Include="Modules\FeedbackForm\FeedbackForm.aspx" />
     <Content Include="Modules\FieldVisit\FieldVisitSchedUpdate.aspx" />
+    <Content Include="Modules\MCID\BenificiaryVsGovtSchemes.aspx" />
     <Content Include="Modules\MCID\MCIDReg.aspx" />
     <Content Include="Modules\VVID\VVIDView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -259,6 +261,13 @@
     <Compile Include="Modules\CMTID\CMTIDReg.aspx.designer.cs">
       <DependentUpon>CMTIDReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\DashBoard\DashBoard1.aspx.cs">
+      <DependentUpon>DashBoard1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\DashBoard\DashBoard1.aspx.designer.cs">
+      <DependentUpon>DashBoard1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\ContactForm\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,13 @@
       <DependentUpon>FieldVisitSchedUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modules\MCID\DatabaseController.cs" />
+    <Compile Include="Modules\MCID\BenificiaryVsGovtSchemes.aspx.cs">
+      <DependentUpon>BenificiaryVsGovtSchemes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MCID\BenificiaryVsGovtSchemes.aspx.designer.cs">
+      <DependentUpon>BenificiaryVsGovtSchemes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Modules\MCID\MCIDReg.aspx.cs">
       <DependentUpon>MCIDReg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
