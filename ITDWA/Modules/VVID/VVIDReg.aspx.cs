@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ITDWA.Common;
 
 namespace ITDWA
 {
@@ -13,7 +14,9 @@ namespace ITDWA
         string VPass;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            MDDataController MDDataController = new MDDataController();
+            MDDataController.ddlmandalDatabind(ddlMandal);
+            MDDataController.ddlmandalDatabind(ddlDisctrict);
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -35,8 +38,8 @@ namespace ITDWA
             string VIdentityNo = txtIDNum.Text;
             string Vdno = txtDno.Text;
             string VVillage = txtVillage.Text;
-            string VMandal = txtMandal.Text;
-            string VDistrict = txtDistrict.Text;
+            string VMandal = ddlMandal.Text;
+            string VDistrict = ddlDisctrict.Text;
             int VPin = Convert.ToInt16(txtPin.Text);
             string VcontactNo = txtContact.Text;
 

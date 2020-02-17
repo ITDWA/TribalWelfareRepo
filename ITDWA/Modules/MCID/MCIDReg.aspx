@@ -97,13 +97,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="email" class="col-form-label">Mandal</label>
-                                <asp:TextBox type="email" runat="server" class="form-control" ID="txtMandal" placeholder="" required></asp:TextBox>
+                                <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
                                 <div class="email-feedback">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="col-form-label">District</label>
-                                <asp:TextBox type="email" runat="server" class="form-control" ID="txtDistrict" placeholder="" required></asp:TextBox>
+                                <asp:DropDownList ID="ddlDisctrict" runat="server"></asp:DropDownList>
                                 <div class="email-feedback">
                                 </div>
                             </div>

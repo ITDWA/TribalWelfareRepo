@@ -223,6 +223,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\MDDataController.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -261,6 +262,7 @@
     <Compile Include="Modules\CMTID\CMTIDReg.aspx.designer.cs">
       <DependentUpon>CMTIDReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modules\CMTID\CMTIDDatabaseController.cs" />
     <Compile Include="Modules\DashBoard\DashBoard1.aspx.cs">
       <DependentUpon>DashBoard1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

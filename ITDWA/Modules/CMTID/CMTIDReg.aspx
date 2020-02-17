@@ -40,7 +40,7 @@
                        <asp:TextBox id="txtCMTFatherName" type="text" runat="server" class="form-control" placeholder="Father Name"></asp:TextBox>
                     </div>
                     <div class="form-group col-md-3">
-                       <asp:TextBox id="txtCMTAgeName" type="text" runat="server" class="form-control" placeholder="Age"></asp:TextBox>
+                       <asp:TextBox id="txtCMTAge" type="text" runat="server" class="form-control" placeholder="Age"></asp:TextBox>
                     </div>
                       <div class="form-group col-md-2">
                        <asp:TextBox id="txtCMTGender" type="text" runat="server" class="form-control" placeholder="Gender"></asp:TextBox>
@@ -86,14 +86,15 @@
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-form-label">Mandal</label>
-                           <asp:TextBox type="txt" runat="server" class="form-control" id="txtMandal" placeholder="" required></asp:TextBox>
+                            <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
+                          
                             <div class="email-feedback">
                             
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-form-label">District</label>
-                            <asp:TextBox type="txt" runat="server" class="form-control" id="txtDistrict" placeholder="" required></asp:TextBox>
+                            <asp:DropDownList ID="ddlDisctrict" runat="server"></asp:DropDownList>
                             <div class="email-feedback">
                             
                             </div>

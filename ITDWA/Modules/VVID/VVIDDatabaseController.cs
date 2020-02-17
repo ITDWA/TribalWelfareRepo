@@ -75,7 +75,6 @@ namespace ITDWA.Modules.VVID
                 cmd.Parameters["@password"].Value = VPass;
                 cmd.Connection = con;
 
-                con.Open();
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

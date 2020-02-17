@@ -49,13 +49,13 @@ namespace ITDWA {
         protected global::System.Web.UI.WebControls.TextBox txtCMTFatherName;
         
         /// <summary>
-        /// txtCMTAgeName control.
+        /// txtCMTAge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMTAgeName;
+        protected global::System.Web.UI.WebControls.TextBox txtCMTAge;
         
         /// <summary>
         /// txtCMTGender control.
@@ -121,22 +121,22 @@ namespace ITDWA {
         protected global::System.Web.UI.WebControls.TextBox txtVillage;
         
         /// <summary>
-        /// txtMandal control.
+        /// ddlMandal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMandal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMandal;
         
         /// <summary>
-        /// txtDistrict control.
+        /// ddlDisctrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDistrict;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDisctrict;
         
         /// <summary>
         /// txtPin control.
