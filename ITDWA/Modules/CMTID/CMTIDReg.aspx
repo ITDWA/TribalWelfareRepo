@@ -3,175 +3,195 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <head runat="server">
-   
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>CMT Member Registration</title>
 </head>
 <body>
- 
 
-<div class="container" style="background-color:#66D77E; margin-top: 1em;">
-    <!-- Sign up form -->
-    <form id="VVID" runat="server">
-        <!-- Sign up card -->
-        <div class="card person-card">
-            <div class="card-body">
-                 <button type="button" onclick='window.location = "/Default.aspx";' class="btn btn-primary"><< Back To Home</button>
-                <br />
-                <br />
-                <!-- Sex image -->
-              <button type="button" disabled="true" style="font-weight:700" class="btn btn-primary btn-lg btn-block">CMTID Registration Form</button>
-                <h2 id="txtVVID" style="margin-left:30%" class="card-title"></h2>
-                <br>
-                <br>
-                <!-- First row (on medium screen) -->
-               
-                <div class="row">
-                     <div class="form-group col-md-3">
-                       <asp:TextBox id="txtCMTT" type="text" runat="server" class="form-control" placeholder="CMTID"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-3">
-                       <asp:TextBox id="txtCMTName" runat="server" type="text" class="form-control" placeholder="CMT Name"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-3">
-                       <asp:TextBox id="txtCMTFatherName" type="text" runat="server" class="form-control" placeholder="Father Name"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-3">
-                       <asp:TextBox id="txtCMTAge" type="text" runat="server" class="form-control" placeholder="Age"></asp:TextBox>
-                    </div>
-                      <div class="form-group col-md-2">
-                       <asp:TextBox id="txtCMTGender" type="text" runat="server" class="form-control" placeholder="Gender"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <asp:TextBox id="txtCMTCast" type="text" runat="server" class="form-control" placeholder="Cast"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-2">
-                       <asp:TextBox id="txtCMTIdentity" type="text" runat="server" class="form-control" placeholder="CMT Identity"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-2">
-                       <asp:TextBox id="txtCMTIDType" type="text" runat="server" class="form-control" placeholder="Identity Type"></asp:TextBox>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <asp:TextBox id="txtCMTIDNum" type="text" runat="server" class="form-control" placeholder="Identity Card Number"></asp:TextBox>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-        
-        <br />
+    <div class="container" style="background-color: #66D77E; margin-top: 1em;">
+        <!-- Sign up form -->
+        <form id="VVID" runat="server">
+            <!-- Sign up card -->
+            <div class="card person-card">
+                <div class="card-body">
+                    <button type="button" onclick='window.location = "/Default.aspx";' class="btn btn-primary"><< Back To Home</button>
+                    <br />
+                    <br />
+                    <!-- Sex image -->
+                    <button type="button" disabled="true" style="font-weight: 700" class="btn btn-primary btn-lg btn-block">CMTID Registration Form</button>
+                    <h2 id="txtVVID" style="margin-left: 30%" class="card-title"></h2>
+                    <br>
+                    <br>
+                    <!-- First row (on medium screen) -->
 
-        <div class="row">
-            <div class="col-md-6" style="padding=0.5em;">
-                <div class="card">
-                    <div class="card-body">
-                        <asp:button type="button" disabled="true" style="font-weight: 700" class="btn btn-primary btn-lg btn-block">Address</asp:button>
-                       
-                        <div class="form-group">
-                            <label class="col-form-label">D.No</label>
-                            <asp:TextBox type="txt" runat="server" class="form-control" id="txtDno" placeholder="" required></asp:TextBox>
-                            <div class="email-feedback">
-                            
-                            </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <asp:TextBox ID="txtCMTT" type="text" runat="server" class="form-control" placeholder="CMTID"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">Village</label>
-                            <asp:TextBox type="txt" runat="server" class="form-control" id="txtVillage" placeholder="" required></asp:TextBox>
-                            <div class="email-feedback">
-                            
-                            </div>
+                        <div class="form-group col-md-3">
+                            <asp:TextBox ID="txtCMTName" runat="server" type="text" class="form-control" placeholder="CMT Name" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" style="color:red;font-size:small" ControlToValidate="txtCMTName" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">Mandal</label>
-                            <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
-                          
-                            <div class="email-feedback">
-                            
-                            </div>
+                        <div class="form-group col-md-3">
+                            <asp:TextBox ID="txtCMTFatherName" type="text" runat="server" class="form-control" placeholder="Father Name" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" style="color:red;font-size:small" ControlToValidate="txtCMTFatherName" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">District</label>
-                            <asp:DropDownList ID="ddlDisctrict" runat="server"></asp:DropDownList>
-                            <div class="email-feedback">
-                            
-                            </div>
+                        <div class="form-group col-md-3">
+                            <asp:TextBox ID="txtCMTAge" type="text" runat="server" class="form-control" placeholder="Age" required="required"></asp:TextBox>
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" style="color:red;font-size:small" ControlToValidate="txtCMTAge"
+                                CultureInvariantValues="True" ErrorMessage='<img src="Warning.jpg"/>Age should be in range of 0 - 100' MaximumValue="100" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                         </div>
-                        <div class="form-group">
-                            <label for="tel" class="col-form-label">PIN Code</label>
-                           <asp:TextBox type="text" runat="server" class="form-control" id="txtPin" placeholder="" required></asp:TextBox>
-                            <div class="phone-feedback">
-                            
-                            </div>
-                              <div class="form-group">
-                            <label for="email" class="col-form-label">Contact Number</label>
-                            <asp:TextBox type="txt" runat="server" class="form-control" id="contactnumber" placeholder="" required></asp:TextBox>
-                            <div class="email-feedback">
-                            
-                            </div>
+                        <div class="form-group col-md-2">
+                            <label class="col-form-label">Gender </label>
+                            <asp:DropDownList runat="server" ID="ddlCMTGender">
+                                <asp:ListItem Text="-Select-" Value="1" Selected="True"></asp:ListItem>
+                                <asp:ListItem Text="Male" Value="2"></asp:ListItem>
+                                <asp:ListItem Text="Female" Value="3"></asp:ListItem>
+                            </asp:DropDownList>
                         </div>
+                        <div class="form-group col-md-2">
+                            <asp:TextBox ID="txtCMTCast" type="text" runat="server" class="form-control" placeholder="Cast" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" style="color:red;font-size:small" ControlToValidate="txtCMTCast" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <asp:TextBox ID="txtCMTIdentity" type="text" runat="server" class="form-control" placeholder="CMT Identity" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" style="color:red;font-size:small" ControlToValidate="txtCMTIdentity" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <asp:TextBox ID="txtCMTIDType" type="text" runat="server" class="form-control" placeholder="Identity Type" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" style="color:red;font-size:small" ControlToValidate="txtCMTIDType" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <asp:TextBox ID="txtCMTIDNum" type="text" runat="server" class="form-control" placeholder="Identity Card Number" required></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" style="color:red;font-size:small" ControlToValidate="txtCMTIDNum" runat="server" ErrorMessage='<img src="Warning.jpg"/>Special Characters are not allowed' ValidationExpression="[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
                         </div>
                     </div>
                 </div>
             </div>
-                
-            <div class="col-md-6">
-                <div class="card"> 
-                    <div class="card-body">
-                        <button type="button" disabled="true" style="font-weight: 700" class="btn btn-primary btn-lg btn-block">Department Details</button>
-                       
-                        <div class="form-group">
-                            <label for="Department" class="col-form-label">Department</label>
-                            <asp:TextBox type="txt" runat="server" class="form-control" id="txtDepartment" placeholder="" required></asp:TextBox>                          
-                        </div>
-                        <div class="form-group">
-                            <label for=Designation" class="col-form-label">Designation</label>
-                           <asp:TextBox type="txt" runat="server" class="form-control" id="txtDsignation" placeholder="" required></asp:TextBox>                     
-                        </div>
-                          <div class="form-group">
-                            <label for="Remarks" class="col-form-label">Remarks</label>
-                           <asp:TextBox type="txt" runat="server" class="form-control" id="txtRemarks" placeholder="" required></asp:TextBox>                        
-                        </div>
-                         <div class="form-group">
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             <br />
-                             
 
-                             </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="margin-top: 1em;">
+            <br />
+
             <div class="row">
-              <div class="col-md-6">
-                   <asp:Button ID="btnSubmit" type="button" Text="Submit" runat="server" class="btn btn-primary btn-lg btn-block" OnClick="btnSubmit_Click"></asp:Button>
-                  </div>
-             <div class="col-md-6">
-                 <button type="button" class="btn btn-primary btn-lg btn-block" onclick='window.location = "/Default.aspx";'>Cancel</button>
-                  </div>
+                <div class="col-md-6" style="padding=0.5em;">
+                    <div class="card">
+                        <div class="card-body">
+                            <asp:Button type="button" disabled="true" Style="font-weight: 700" class="btn btn-primary btn-lg btn-block">Address</asp:Button>
+
+                            <div class="form-group">
+                                <label class="col-form-label">D.No</label>
+                                <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDno" placeholder="" required="required"></asp:TextBox>
+                                <div class="email-feedback">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Village</label>
+                                <asp:TextBox type="txt" runat="server" class="form-control" ID="txtVillage" placeholder="" required="required"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator8" style="color:red;font-size:small" ControlToValidate="txtVillage" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+
+                                <div class="email-feedback">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Mandal</label>
+                                <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator13" style="color:red;font-size:small" ControlToValidate="ddlMandal" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+
+                                <div class="email-feedback">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">District</label>
+                                <asp:DropDownList ID="ddlDisctrict" runat="server"></asp:DropDownList>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator14" style="color:red;font-size:small" ControlToValidate="ddlDisctrict" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+
+                                <div class="email-feedback">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel" class="col-form-label">PIN Code</label>
+                                <asp:TextBox type="text" runat="server" class="form-control" ID="txtPin" placeholder="" required></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator9" style="color:red;font-size:small" ControlToValidate="txtPin" ErrorMessage='<img src="Warning.jpg"/>Enter Valid Pincode' runat="server" ValidationExpression="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$"></asp:RegularExpressionValidator>
+                                <div class="phone-feedback">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label">Contact Number</label>
+                                    <asp:TextBox type="txt" runat="server" class="form-control" ID="contactnumber" placeholder="" required="required"></asp:TextBox>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator10" style="color:red;font-size:small" ControlToValidate="contactnumber" runat="server" ErrorMessage='<img src="Warning.jpg"/>Enter Valid Mobile No' ValidationExpression="^[1-9]{1}[0-9]{9}$"></asp:RegularExpressionValidator>
+
+                                    <div class="email-feedback">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            <br />
-            <br />
-        </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <button type="button" disabled="true" style="font-weight: 700" class="btn btn-primary btn-lg btn-block">Department Details</button>
+
+                            <div class="form-group">
+                                <label for="Department" class="col-form-label">Department</label>
+                                <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDepartment" placeholder="" required></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="Designation" class="col-form-label">Designation</label>
+                                <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDsignation" placeholder="" required="required"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator11" style="color:red;font-size:small"  ControlToValidate="txtDsignation" runat="server" ErrorMessage='<img src="Warning.jpg"/>Special Characters are not allowed' ValidationExpression="[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="Remarks" class="col-form-label">Remarks</label>
+                                <asp:TextBox type="txt" runat="server" class="form-control" ID="txtRemarks" placeholder="" required="required"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator12" ErrorMessage='<img src="Warning.jpg"/>Special Characers not allowed except -.&%*#/' style="color:red;font-size:small" ControlToValidate="txtRemarks" runat="server"  ValidationExpression="[a-zA-Z0-9-.&%*#/]*$"></asp:RegularExpressionValidator>
+
+                            </div>
+                            <div class="form-group">
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 1em;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <asp:Button ID="btnSubmit" type="button" Text="Submit" runat="server" class="btn btn-primary btn-lg btn-block" OnClick="btnSubmit_Click"></asp:Button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick='window.location = "/Default.aspx";'>Cancel</button>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
         </form>
-</div>
-   
+    </div>
+
 </body>
-    <style>
-        body {
-    background-color: #e9ebee;
-}
-    </style>
+<style>
+    body {
+        background-color: #e9ebee;
+    }
+</style>
 
 </html>

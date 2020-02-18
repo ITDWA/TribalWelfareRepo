@@ -31,7 +31,7 @@ namespace ITDWA
             string vvidName = txtFirstName.Text + txtLastName.Text;
             string vvFatherName = txtFatherName.Text;
             int VtxtAge = Convert.ToInt16(txtAge.Text);
-            string VtxtGender = txtGender.Text;
+            string VtxtGender = ddlVVGender.Text;
             string VtxtDOB = txtDOB.Text;
             string VtxtCaste = txtCaste.Text;
             string VIdentityType = txtIDType.Text;

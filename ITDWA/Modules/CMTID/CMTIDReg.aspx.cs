@@ -30,7 +30,7 @@ namespace ITDWA
             CMTIDDatabaseController CMTIDInsert = new CMTIDDatabaseController();
             string CMTIdName = txtCMTName.Text;    
             int CMTtxtAge = Convert.ToInt16(txtCMTAge.Text);
-            string CMTtxtGender = txtCMTGender.Text;
+            string CMTtxtGender = ddlCMTGender.Text;
             string CMTtxtCaste = txtCMTCast.Text;
             string CMTidentity = txtCMTIdentity.Text;
             string CMTIdentityType = txtCMTIDType.Text;
