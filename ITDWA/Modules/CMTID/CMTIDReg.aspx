@@ -101,7 +101,7 @@
                             <div class="form-group">
                                 <label for="email" class="col-form-label">Mandal</label>
                                 <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator13" style="color:red;font-size:small" ControlToValidate="ddlMandal" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator13" style="color:red;font-size:small" ControlToValidate="ddlMandal" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
 
                                 <div class="email-feedback">
                                 </div>
