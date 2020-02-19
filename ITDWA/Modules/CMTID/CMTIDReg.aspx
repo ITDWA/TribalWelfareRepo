@@ -30,23 +30,37 @@
                     <!-- First row (on medium screen) -->
 
                     <div class="row">
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTT" type="text" runat="server" class="form-control" placeholder="CMTID"></asp:TextBox>
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTT"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTName" runat="server" type="text" class="form-control" placeholder="CMT Name" required="required"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" style="color:red;font-size:small" ControlToValidate="txtCMTName" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
 
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" Style="color: red; font-size: small" ControlToValidate="txtCMTName" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid CMT Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTName"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTFatherName" type="text" runat="server" class="form-control" placeholder="Father Name" required="required"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" style="color:red;font-size:small" ControlToValidate="txtCMTFatherName" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
-
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" Style="color: red; font-size: small" ControlToValidate="txtCMTFatherName" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Father Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTFatherName"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTAge" type="text" runat="server" class="form-control" placeholder="Age" required="required"></asp:TextBox>
-                            <asp:RangeValidator ID="RangeValidator1" runat="server" style="color:red;font-size:small" ControlToValidate="txtCMTAge"
-                                CultureInvariantValues="True" ErrorMessage='<img src="Warning.jpg"/>Age should be in range of 0 - 100' MaximumValue="100" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" Style="color: red; font-size: small" ControlToValidate="txtCMTAge"
+                                CultureInvariantValues="True" ErrorMessage='<img src="Warning.jpg"/> Age should be in range of 0 - 100' MaximumValue="100" MinimumValue="0"
+                                Type="Integer"></asp:RangeValidator>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTAge"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group col-md-2">
                             <label class="col-form-label">Gender </label>
@@ -56,21 +70,40 @@
                                 <asp:ListItem Text="Female" Value="3"></asp:ListItem>
                             </asp:DropDownList>
                         </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="ddlCMTGender"></asp:RequiredFieldValidator>
+                        </div>
                         <div class="form-group col-md-2">
-                            <asp:TextBox ID="txtCMTCast" type="text" runat="server" class="form-control" placeholder="Cast" required="required"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" style="color:red;font-size:small" ControlToValidate="txtCMTCast" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtCMTCast" type="text" runat="server" class="form-control" placeholder="Caste" required="required"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" Style="color: red; font-size: small" ControlToValidate="txtCMTCast" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Caste' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTCast"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTIdentity" type="text" runat="server" class="form-control" placeholder="CMT Identity" required="required"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" style="color:red;font-size:small" ControlToValidate="txtCMTIdentity" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" Style="color: red; font-size: small" ControlToValidate="txtCMTIdentity" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid CMT Identity' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTIdentity"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTIDType" type="text" runat="server" class="form-control" placeholder="Identity Type" required="required"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" style="color:red;font-size:small" ControlToValidate="txtCMTIDType" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" Style="color: red; font-size: small" ControlToValidate="txtCMTIDType" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Identity Type' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTIDType"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtCMTIDNum" type="text" runat="server" class="form-control" placeholder="Identity Card Number" required></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" style="color:red;font-size:small" ControlToValidate="txtCMTIDNum" runat="server" ErrorMessage='<img src="Warning.jpg"/>Special Characters are not allowed' ValidationExpression="[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Style="color: red; font-size: small" ControlToValidate="txtCMTIDNum" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Identity Card Number' ValidationExpression="[a-zA-Z0-9\s]*$"></asp:RegularExpressionValidator>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCMTIDNum"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                 </div>
@@ -85,45 +118,54 @@
                             <asp:Button type="button" disabled="true" Style="font-weight: 700" class="btn btn-primary btn-lg btn-block">Address</asp:Button>
 
                             <div class="form-group">
-                                <label class="col-form-label">D.No</label>
+                                <label class="col-form-label">D.No</label><asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="txtDno"></asp:RequiredFieldValidator>
+                               
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDno" placeholder="" required="required"></asp:TextBox>
                                 <div class="email-feedback">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label for="email" class="col-form-label">Village</label>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="txtVillage"></asp:RequiredFieldValidator>
+                                
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtVillage" placeholder="" required="required"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator8" style="color:red;font-size:small" ControlToValidate="txtVillage" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator8" Style="color: red; font-size: small" ControlToValidate="txtVillage" runat="server"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid Village Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
 
                                 <div class="email-feedback">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-form-label">Mandal</label>
+                                <label for="email" class="col-form-label">Mandal</label><asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="ddlMandal"></asp:RequiredFieldValidator>
                                 <asp:DropDownList ID="ddlMandal" runat="server"></asp:DropDownList>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator13" style="color:red;font-size:small" ControlToValidate="ddlMandal" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator13" Style="color: red; font-size: small" ControlToValidate="ddlMandal" runat="server"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid Mandal Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
 
                                 <div class="email-feedback">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-form-label">District</label>
+                                <label for="email" class="col-form-label">District</label><asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="ddlDisctrict"></asp:RequiredFieldValidator>
                                 <asp:DropDownList ID="ddlDisctrict" runat="server"></asp:DropDownList>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator14" style="color:red;font-size:small" ControlToValidate="ddlDisctrict" runat="server" ErrorMessage='<img src="Warning.jpg"/>Only Alphabets allowed' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator14" Style="color: red; font-size: small" ControlToValidate="ddlDisctrict" runat="server"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid District Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
 
                                 <div class="email-feedback">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="tel" class="col-form-label">PIN Code</label>
+                                <label for="tel" class="col-form-label">PIN Code</label><asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="txtPin"></asp:RequiredFieldValidator>
                                 <asp:TextBox type="text" runat="server" class="form-control" ID="txtPin" placeholder="" required></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator9" style="color:red;font-size:small" ControlToValidate="txtPin" ErrorMessage='<img src="Warning.jpg"/>Enter Valid Pincode' runat="server" ValidationExpression="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator9" Style="color: red; font-size: small" ControlToValidate="txtPin"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid Pincode' runat="server" ValidationExpression="^[\s][1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}[\s]*$"></asp:RegularExpressionValidator>
                                 <div class="phone-feedback">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email" class="col-form-label">Contact Number</label>
+                                    <label for="email" class="col-form-label">Contact Number</label><asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="contactnumber"></asp:RequiredFieldValidator>
                                     <asp:TextBox type="txt" runat="server" class="form-control" ID="contactnumber" placeholder="" required="required"></asp:TextBox>
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator10" style="color:red;font-size:small" ControlToValidate="contactnumber" runat="server" ErrorMessage='<img src="Warning.jpg"/>Enter Valid Mobile No' ValidationExpression="^[1-9]{1}[0-9]{9}$"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator10" Style="color: red; font-size: small" ControlToValidate="contactnumber" runat="server"
+                                        ErrorMessage='<img src="Warning.jpg"/> Enter Valid Mobile No' ValidationExpression="^[\s]*[1-9\s]{1}[0-9]{9}[\s]*$"></asp:RegularExpressionValidator>
 
                                     <div class="email-feedback">
                                     </div>
@@ -143,15 +185,17 @@
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDepartment" placeholder="" required></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <label for="Designation" class="col-form-label">Designation</label>
+                                <label for="Designation" class="col-form-label">Designation</label><asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="txtDsignation"></asp:RequiredFieldValidator>
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtDsignation" placeholder="" required="required"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator11" style="color:red;font-size:small"  ControlToValidate="txtDsignation" runat="server" ErrorMessage='<img src="Warning.jpg"/>Special Characters are not allowed' ValidationExpression="[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator11" Style="color: red; font-size: small" ControlToValidate="txtDsignation" runat="server"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid Designation' ValidationExpression="[a-zA-Z0-9\s]*$"></asp:RegularExpressionValidator>
 
                             </div>
                             <div class="form-group">
-                                <label for="Remarks" class="col-form-label">Remarks</label>
+                                <label for="Remarks" class="col-form-label">Remarks</label><asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage=' <img src="Warning.jpg"/>' ControlToValidate="txtRemarks"></asp:RequiredFieldValidator>
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtRemarks" placeholder="" required="required"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator12" ErrorMessage='<img src="Warning.jpg"/>Special Characers not allowed except -.&%*#/' style="color:red;font-size:small" ControlToValidate="txtRemarks" runat="server"  ValidationExpression="[a-zA-Z0-9-.&%*#/]*$"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator12"
+                                    ErrorMessage='<img src="Warning.jpg"/> Enter Valid Remarks' Style="color: red; font-size: small" ControlToValidate="txtRemarks" runat="server" ValidationExpression="[a-zA-Z0-9-.&%*#/\s]*$"></asp:RegularExpressionValidator>
 
                             </div>
                             <div class="form-group">
