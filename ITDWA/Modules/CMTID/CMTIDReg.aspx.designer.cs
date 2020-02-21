@@ -31,15 +31,6 @@ namespace ITDWA {
         protected global::System.Web.UI.WebControls.TextBox txtCMTT;
         
         /// <summary>
-        /// RequiredFieldValidator10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
-        
-        /// <summary>
         /// txtCMTName control.
         /// </summary>
         /// <remarks>
@@ -310,15 +301,6 @@ namespace ITDWA {
         protected global::System.Web.UI.WebControls.DropDownList ddlMandal;
         
         /// <summary>
-        /// RegularExpressionValidator13 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator13;
-        
-        /// <summary>
         /// RequiredFieldValidator13 control.
         /// </summary>
         /// <remarks>
@@ -335,15 +317,6 @@ namespace ITDWA {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDisctrict;
-        
-        /// <summary>
-        /// RegularExpressionValidator14 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator14;
         
         /// <summary>
         /// RequiredFieldValidator14 control.

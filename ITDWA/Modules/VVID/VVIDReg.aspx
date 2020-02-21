@@ -36,9 +36,6 @@
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtVV" type="text" runat="server" class="form-control" placeholder="VVID"></asp:TextBox>
                         </div>
-                        <div class="form-group col-md-1">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtVV"></asp:RequiredFieldValidator>
-                        </div>
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtFirstName" runat="server" type="text"
                                 class="form-control" placeholder="First name" required="required"></asp:TextBox>
@@ -91,13 +88,12 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtCaste"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group col-md-2">
-                            <asp:TextBox ID="txtDOB" type="text" runat="server" class="form-control" placeholder="Date of Birth" required></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" Style="color: red; font-size: small" ControlToValidate="txtDOB" runat="server"
-                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Date' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
-
+                            <asp:TextBox ID="txtDOB" type="text" runat="server" class="form-control" placeholder="Date of Birth"></asp:TextBox>
+                            <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator6" Style="color: red; font-size: small" ControlToValidate="txtDOB" runat="server"
+                                ErrorMessage='<img src="Warning.jpg"/> Enter Valid Date' ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>--%>
                         </div>
                         <div class="form-group col-md-1">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtDOB"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="txtDOB"></asp:RequiredFieldValidator>--%>
                         </div>
                         <div class="form-group col-md-2">
                             <asp:TextBox ID="txtIDType" type="text" runat="server" class="form-control" placeholder="Identity Type" required></asp:TextBox>
@@ -142,16 +138,12 @@
                                 <asp:TextBox type="txt" runat="server" class="form-control" ID="txtVillage" placeholder="" required></asp:TextBox>
                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator10" Style="color: red; font-size: small" ControlToValidate="txtVillage" runat="server"
                                     ErrorMessage='<img src="Warning.jpg"/> Enter valid Village Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>
-
-                                <div class="email-feedback">
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="col-form-label">Mandal</label>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="ddlMandal"></asp:RequiredFieldValidator>
 
-                                <asp:DropDownList ID="ddlMandal" runat="server" required>
-                                    <asp:ListItem Text="Test" Value="1"></asp:ListItem>
+                                <asp:DropDownList ID="ddlMandal" runat="server">
                                 </asp:DropDownList>
                                 <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator11" style="color:red;font-size:small" ControlToValidate="ddlMandal" runat="server" 
                                     ErrorMessage='<img src="Warning.jpg"/> Enter valid Mandal Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>--%>
@@ -163,10 +155,8 @@
                                 <label for="email" class="col-form-label">District</label>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage='<img src="Warning.jpg"/>' ControlToValidate="ddlDisctrict"></asp:RequiredFieldValidator>
 
-                                <asp:DropDownList ID="ddlDisctrict" runat="server" required>
-                                    <asp:ListItem Text="Test" Value="1"></asp:ListItem>
-
-
+                                <asp:DropDownList ID="ddlDisctrict" AutoPostBack="true" OnSelectedIndexChanged="ddlDistOnSelectIndexChange" runat="server">
+                                   
                                 </asp:DropDownList>
                                 <%-- <asp:RegularExpressionValidator ID="RegularExpressionValidator12" style="color:red;font-size:small" ControlToValidate="ddlDisctrict" runat="server" 
                                     ErrorMessage='<img src="Warning.jpg"/> Enter valid District Name' ValidationExpression="^[A-Za-z\s]*$"></asp:RegularExpressionValidator>--%>
@@ -182,8 +172,6 @@
                                 <asp:RegularExpressionValidator ID="RegularExpressionValidator13" Style="color: red; font-size: small" ControlToValidate="txtPin" MaxLength="6" runat="server"
                                     ErrorMessage='<img src="Warning.jpg"/> Enter Valid Pincode' ValidationExpression="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$"></asp:RegularExpressionValidator>
 
-                                <div class="phone-feedback">
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="tel" class="col-form-label">Contact Number</label>
@@ -234,7 +222,9 @@
                                 <br />
                                 <br />
                                 <br />
-
+                                <br />
+                                <br />
+                                <br />
 
                             </div>
                         </div>
@@ -243,11 +233,13 @@
             </div>
             <div style="margin-top: 1em;">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <asp:Button ID="btnRegister" type="button" Text="Register" runat="server" class="btn btn-primary btn-lg btn-block" OnClick="btnRegister_Click"></asp:Button>
                     </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick='window.location = "/Default.aspx";'>Cancel</button>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-3">
+                        <asp:Button ID="btnCancel" type="button" Text="Cancel" runat="server" OnClientClick='javascript:window.location.href="/Default.aspx";' class="btn btn-primary btn-lg btn-block"></asp:Button>
+                        <%--<button type="button" class="cancelBtn btn btn-primary btn-lg btn-block" onclick='window.location = "/Default.aspx";'>Cancel</button>--%>
                     </div>
                 </div>
                 <br />
@@ -261,6 +253,64 @@
     body {
         background-color: #e9ebee;
     }
+
+     #btnSubmit {
+              display: inline-block;
+        padding: 2px 3px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+    }
+
+        #btnSubmit:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    #btnCancel {
+        display: inline-block;
+        padding: 2px 3px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+    }
+
+        #btnCancel:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+         .btn {
+        display: inline-block;
+        padding: 2px 4px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+    }
+
+             .btn:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        
+        }
 </style>
 <script>
     $(document).ready(function () {

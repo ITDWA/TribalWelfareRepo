@@ -12,7 +12,7 @@ namespace ITDWA.Modules.VVID
     {
 
         public void insertVVID(string VVIDName, string vvFatherName, int VtxtAge, string VtxtGender, string VtxtDOB, string VtxtCaste,
-            string VIdentityType, string VIdentityNo, string Vdno, string VVillage, string VMandal, string VDistrict, int VPin, string VcontactNo, string VPass)
+            string VIdentityType, string VIdentityNo, string Vdno, string VVillage, int VMandal, int VDistrict, int VPin, string VcontactNo, string VPass)
         {
 
             // Initialize Connection
@@ -42,9 +42,11 @@ namespace ITDWA.Modules.VVID
                 cmd.Parameters.Add(new SqlParameter("@gender", SqlDbType.VarChar));
                 cmd.Parameters["@gender"].Value = VtxtGender;
 
+                cmd.Parameters.Add(new SqlParameter("@DOB", SqlDbType.VarChar));
+                cmd.Parameters["@DOB"].Value = VtxtDOB;
 
                 cmd.Parameters.Add(new SqlParameter("@caste", SqlDbType.VarChar));
-                cmd.Parameters["@caste"].Value = VtxtCaste;
+                cmd.Parameters["@caste"].Value = VtxtCaste;                
 
                 cmd.Parameters.Add(new SqlParameter("@identity_type", SqlDbType.VarChar));
                 cmd.Parameters["@identity_type"].Value = VIdentityType;
@@ -58,12 +60,12 @@ namespace ITDWA.Modules.VVID
                 cmd.Parameters.Add(new SqlParameter("@Village", SqlDbType.VarChar));
                 cmd.Parameters["@Village"].Value = VVillage;
 
-                cmd.Parameters.Add(new SqlParameter("@mandal_name", SqlDbType.VarChar));
-                cmd.Parameters["@mandal_name"].Value = VMandal;
+                cmd.Parameters.Add(new SqlParameter("@mandal_id", SqlDbType.VarChar));
+                cmd.Parameters["@mandal_id"].Value = VMandal;
 
 
-                cmd.Parameters.Add(new SqlParameter("@district_name", SqlDbType.VarChar));
-                cmd.Parameters["@district_name"].Value = VDistrict;
+                cmd.Parameters.Add(new SqlParameter("@district_id", SqlDbType.VarChar));
+                cmd.Parameters["@district_id"].Value = VDistrict;
 
                 cmd.Parameters.Add(new SqlParameter("@pincode", SqlDbType.Int));
                 cmd.Parameters["@pincode"].Value = VPin;

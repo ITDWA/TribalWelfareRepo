@@ -12,11 +12,31 @@ namespace ITDWA
 {
     public partial class CMTIDReg : System.Web.UI.Page
     {
+        DataTable dtMandal;
+        MDDataController MDDataController = new MDDataController();
         protected void Page_Load(object sender, EventArgs e)
         {
-            MDDataController MDDataController = new MDDataController();
-            MDDataController.ddlmandalDatabind(ddlMandal);
-            MDDataController.ddlmandalDatabind(ddlDisctrict);
+            if (!IsPostBack)
+            {
+                dtMandal = MDDataController.ddlmandalDatabind(ddlDisctrict);
+            }
+        }
+
+        protected void ddlDistOnSelectIndexChange(object sender, EventArgs e)
+        {
+            int dist_id = Convert.ToInt16(ddlDisctrict.SelectedItem.Value);
+
+            ddlMandal.Enabled = false;
+            ddlMandal.Items.Clear();
+            if (dist_id > 0)
+            {
+                dtMandal = MDDataController.ddlmandalDatabind1(ddlMandal);
+                DataRow[] dRow = dtMandal.Select("dist_id=" + dist_id.ToString());
+
+                ddlMandal.DataSource = dRow.CopyToDataTable();
+                ddlMandal.DataBind();
+                ddlMandal.Enabled = true;
+            }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

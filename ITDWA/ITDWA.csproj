@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -144,6 +145,9 @@
     <Content Include="css\bootstrap\.DS_Store" />
     <Content Include="css\css\.DS_Store" />
     <Content Include="images\4.jpg" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
     <Content Include="js\.DS_Store" />
     <Content Include="css\css\birdstyle.less" />
     <Content Include="css\css\bird.scss" />

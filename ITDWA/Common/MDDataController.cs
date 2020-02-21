@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace ITDWA.Common
 {
-    public class MDDataController:SQLCon
+    public class MDDataController : SQLCon
     {
         public DataSet MDDataBind()
         {
@@ -24,24 +25,38 @@ namespace ITDWA.Common
         }
 
 
-        public void ddlmandalDatabind(DropDownList ddlname)
+        public DataTable ddlmandalDatabind(DropDownList ddlname)
         {
             DataSet dst = new DataSet();
-           
+
             dst = MDDataBind();
-            if (ddlname.ID == "ddlMandal")
-            {
-                ddlname.DataSource = dst.Tables[1];
-                ddlname.DataBind();
-                ddlname.DataTextField = "mandal_name";
-            }
-            else
-            {
-                ddlname.DataSource = dst.Tables[0];
-                ddlname.DataBind();
-                ddlname.DataTextField = "dist_name";
-            }
+
+            ddlname.DataSource = dst.Tables[0];
             ddlname.DataBind();
+            ddlname.DataTextField = "dist_name";
+            ddlname.DataValueField = "dist_id";
+
+
+            ddlname.DataBind();
+            ddlname.Items.Insert(0, new ListItem("-select-", "0"));
+            return dst.Tables[1];
+        }
+
+        public DataTable ddlmandalDatabind1(DropDownList ddlname1)
+        {
+            DataSet dst = new DataSet();
+
+            dst = MDDataBind();
+
+            ddlname1.DataSource = dst.Tables[1];
+            ddlname1.DataBind();
+            ddlname1.DataTextField = "mandal_name";
+            ddlname1.DataValueField = "dist_id";
+
+
+            ddlname1.DataBind();
+            ddlname1.Items.Insert(0, new ListItem("-select-", "0"));
+            return dst.Tables[1];
         }
     }
 }
